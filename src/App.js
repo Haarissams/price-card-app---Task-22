@@ -1,9 +1,9 @@
 import React from 'react';
 import PriceCard from './components/PriceCard';
-import './components/PriceCard.css'; // Import the CSS file for styling
+import './components/PriceCard.css'; 
 
 const App = () => {
-  // Example data
+
   const plans = [
     {
       plan: 'Basic Plan',

@@ -1,5 +1,5 @@
 import React from 'react';
-import './PriceCard.css'; // Import the CSS file for styling (optional)
+import './PriceCard.css'; 
 
 const PriceCard = ({ plan, price, features, isPopular }) => {
   return (
