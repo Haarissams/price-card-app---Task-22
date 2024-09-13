@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PriceCard from './components/PriceCard';
+import './components/PriceCard.css'; // Import the CSS file for styling
 
-function App() {
+const App = () => {
+  // Example data
+  const plans = [
+    {
+      plan: 'Basic Plan',
+      price: '$10/month',
+      features: ['Single User', '1.5GB/Day', 'Unlimited Calls'],
+      isPopular: false
+    },
+    {
+      plan: 'Standard Plan',
+      price: '$20/month',
+      features: ['5 User', '2GB/Day', 'Unlimited Calls'],
+      isPopular: true
+    },
+    {
+      plan: 'Premium Plan',
+      price: '$30/month',
+      features: ['10 User', '2.5GB/Day', 'Unlimited Calls'],
+      isPopular: false
+    }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {plans.map((plan, index) => (
+        <PriceCard
+          key={index}
+          plan={plan.plan}
+          price={plan.price}
+          features={plan.features}
+          isPopular={plan.isPopular}
+        />
+      ))}
     </div>
   );
-}
+};
 
 export default App;
