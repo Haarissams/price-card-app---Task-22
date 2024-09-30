@@ -1,57 +1,73 @@
+/* General styling for the price card */
+.price-card {
+  background-color: white;
+  border: 2px solid #007bff; /* Blue outline */
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
 
-.app {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    padding: 20px;
-  }
-  
-  .price-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease;
-  }
-  
-  .price-card:hover {
-    transform: scale(1.05); 
-  }
-  
+/* Add a highlight for popular plans (can change color for popular plan if desired) */
+.price-card.popular {
+  border-color: #0056b3; /* Darker blue for the popular card */
+  transform: scale(1.05);
+}
 
-  .plan-name {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .price {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .features-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .feature {
-    margin: 5px 0;
-  }
-  
-  .buy-now {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .buy-now:hover {
-    background-color: #0056b3;
-  }
-  
+/* Plan name */
+.plan-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Price styling */
+.price {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #007bff;
+}
+
+/* List of features */
+.features-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Individual feature styling */
+.feature {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 'Buy Now' button */
+.buy-now {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effect */
+.buy-now:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect on the entire price card */
+.price-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
